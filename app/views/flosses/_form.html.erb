@@ -1,0 +1,22 @@
+<%= form_for(@floss) do |f| %>
+  <% if @floss.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@floss.errors.count, "error") %> prohibited this floss from being saved:</h2>
+
+      <ul>
+      <% @floss.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <% #f.number_field :user %>
+    <%= f.hidden_field :user %>
+    <%= image_tag current_user.image %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Yes! I flossed!", :class=>"button" %>
+  </div>
+<% end %>

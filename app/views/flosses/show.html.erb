@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @floss.user %>
+</p>
+<p>
+	Flossing time: <%= @floss.created_at.to_s %>
+</p>
+
+<p>
+<%= @user.first_name %>, you did it! Keep on flossing!
+</p>
+
+
+
+<%= link_to 'Back', root_path, :class=>"button" %>

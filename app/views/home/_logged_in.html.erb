@@ -9,3 +9,11 @@ Hi <%= current_user.first_name %>
 Your email is <%= current_user.email %>
 </br>
 <%= image_tag current_user.image %>
+
+</br>
+<%= link_to 'Did you floss?', new_floss_path, :class=>"button" %>
+</br>
+
+<% @my_flosses.each do |floss| %>
+    <li><%= floss.created_at %>: <%= link_to 'Show', floss %></li>
+<% end %>
