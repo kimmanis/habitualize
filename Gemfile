@@ -36,3 +36,9 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "compass-rails", ">= 1.0.3", :group => :assets
+gem "zurb-foundation", ">= 4.0.9", :group => :assets
+gem "sendgrid", ">= 1.0.1"
+gem "omniauth", ">= 1.1.3"
+gem "omniauth-facebook"
