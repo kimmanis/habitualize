@@ -21,3 +21,22 @@ Your email is <%= current_user.email %>
 </br>
 Reminder time: <%= current_user.reminder_time.to_s(:reminder_time) %>
 <%= link_to 'Edit Reminder Time', edit_user_path(current_user), :class=>"button" %>
+
+<% if @past_time %>
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+    $("#myModal").foundation('reveal', 'open');
+
+	});
+	
+	</script>
+<% end %>
+
+
+<div id="myModal" class="reveal-modal">
+  <h2>Did you floss?</h2>
+  <p class="lead">You haven't flossed today.</p>
+  <p>And you told me to remind you.</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
