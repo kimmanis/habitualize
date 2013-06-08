@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :provider, :uid, :name, :email, :first_name, :last_name, :image
+  attr_accessible :provider, :uid, :name, :email, :first_name, :last_name, :image, :reminder, :next_reminder, :reminder_time
   validates_presence_of :name
 
   def self.create_with_omniauth(auth)

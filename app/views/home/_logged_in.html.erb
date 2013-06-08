@@ -17,3 +17,7 @@ Your email is <%= current_user.email %>
 <% @my_flosses.each do |floss| %>
     <li><%= floss.created_at %>: <%= link_to 'Show', floss %></li>
 <% end %>
+
+</br>
+Reminder time: <%= current_user.reminder_time.to_s(:reminder_time) %>
+<%= link_to 'Edit Reminder Time', edit_user_path(current_user), :class=>"button" %>

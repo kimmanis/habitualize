@@ -1,3 +1,4 @@
 <h3>User</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<p>Reminder time: <%= @user.reminder_time.to_s(:reminder_time) %></p>
