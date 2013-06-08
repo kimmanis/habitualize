@@ -1,42 +1,105 @@
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+<div class="hero">
+  <div class="row">
+    <div class="large-2 small-4 columns">
+    	<%= image_tag current_user.image, :class=>"profile-picture", :size=>"80x80" %>
+      
+    </div>
+    <div class="large-6 small-8 end scolumns">
+      <p class="name"><%= current_user.name %></p>
+      <p>Daily reminder time: <%= current_user.reminder_time.to_s(:reminder_time) %></p>
+    </div>
+  </div><br />
+  <div class="row">
+    <div class="large-12 columns">
+      <p class="center"><a href="#" data-reveal-id="myModal" class="button checkin">Did you floss?</a></p>
+    </div>
+  </div>
+</div>
+  <br />
+
+<!-- today -->
+<% if @floss_today %>
+<% if @floss_today.skipped == 1 %>
+  <div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/x.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You skipped today</p>
+      <p class="sub-status-text">Come on! You can do it.</p>
+    </div>
+  </div>
+<% else %>
+  <div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/check.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You flossed today! Go you!</p>
+      <p class="sub-status-text">Done at <%= @floss_today.created_at.to_s(:reminder_time) %>!</p>
+    </div>
+  </div>
+<% end %>
+<% else %>
+<div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/alarm.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You skipped today</p>
+      <p class="sub-status-text">You haven't flossed yet. There's still time!</p>
+    </div>
+  </div>
 <% end %>
 
-you're logged in! /views/home/logged_in
-</br>
-Hi <%= current_user.first_name %>
-</br>
-Your email is <%= current_user.email %>
-</br>
-<%= image_tag current_user.image %>
 
-</br>
-<%= link_to 'Did you floss?', new_floss_path, :class=>"button" %>
-</br>
 
-<% @my_flosses.each do |floss| %>
-    <li><%= floss.created_at %>: <%= link_to 'Show', floss %></li>
-<% end %>
 
-</br>
-Reminder time: <%= current_user.reminder_time.to_s(:reminder_time) %>
-<%= link_to 'Edit Reminder Time', edit_user_path(current_user), :class=>"button" %>
 
+  
+    <!-- Footer -->
+
+      <footer class="row">
+        <div class="large-12 columns"><hr>
+            <div class="row">
+
+              <div class="large-6 columns">
+                  <p>&copy; 2013 Habitualize. A <a href="http://startupweekend.org">StartupWeekend</a> Project.</p>
+              </div>
+
+              <div class="large-6 small-12 columns">
+                  <ul class="inline-list right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                  </ul>
+              </div>
+
+            </div>
+        </div>
+      </footer>
+
+    <!-- End Footer -->
+
+    </div>
+  </div>
+
+
+<!-- show the popup if it's your time to floss! -->
 <% if @past_time %>
 	<script type="text/javascript">
 	$(document).ready(function() {
-
     $("#myModal").foundation('reveal', 'open');
-
 	});
-	
 	</script>
 <% end %>
 
 
+<!-- modal ux: find the rest in flosses/form -->
 <div id="myModal" class="reveal-modal">
   <h2>Did you floss?</h2>
-  <p class="lead">You haven't flossed today.</p>
-  <p>And you told me to remind you.</p>
+  <%= render "flosses/form"  %>
   <a class="close-reveal-modal">&#215;</a>
 </div>

@@ -8,10 +8,15 @@
 	Flossing time: <%= @floss.created_at.to_s %>
 </p>
 
+<% if @floss.skipped == 1 %>
+<p>
+Really? You aren't going to floss??
+</p>
+
+<% else %>
 <p>
 <%= @user.first_name %>, you did it! Keep on flossing!
 </p>
-
-
+<% end %>
 
 <%= link_to 'Back', root_path, :class=>"button" %>
