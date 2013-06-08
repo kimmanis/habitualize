@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :provider, :uid, :name, :email
+  attr_accessible :provider, :uid, :name, :email, :first_name, :last_name, :image
   validates_presence_of :name
 
   def self.create_with_omniauth(auth)
@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
       if auth['info']
          user.name = auth['info']['name'] || ""
          user.email = auth['info']['email'] || ""
+         user.first_name = auth['info']['first_name'] || ""
+         user.last_name = auth['info']['last_name'] || ""
+         user.image = auth['info']['image'] || ""
       end
     end
   end

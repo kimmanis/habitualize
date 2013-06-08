@@ -3,3 +3,9 @@
 <% end %>
 
 you're logged in! /views/home/logged_in
+</br>
+Hi <%= current_user.first_name %>
+</br>
+Your email is <%= current_user.email %>
+</br>
+<%= image_tag current_user.image %>
