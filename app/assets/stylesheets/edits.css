@@ -80,3 +80,7 @@
   font-weight: 100;
   margin-bottom: 0px;
 }
+.pic-small {
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
