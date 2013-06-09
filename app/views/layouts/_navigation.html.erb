@@ -4,7 +4,7 @@
       <li class="name">
         <h1>
           <a href="<%= root_path %>">
-            Habitualize
+            <%= image_tag 'Habit43.png' %>
           </a>
         </h1>
       </li>
@@ -20,7 +20,9 @@
           <a href="#"><%= current_user.name %></a>
           <ul class="dropdown">
             <li><a href="<%= edit_user_path(current_user) %>">Edit Reminder Time</a></li>
+            <li><%= link_to "Admin", users_path %></li>
             <li><a href="<%= signout_path %>">Logout</a></li>
+
           </ul>
         </li>
       </ul>

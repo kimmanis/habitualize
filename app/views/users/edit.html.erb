@@ -1,6 +1,11 @@
 <%= form_for(@user) do |f| %>
+	<%= image_tag @user.image %><%= @user.name %>
+	</br>
+
+	
   <%= f.label "Daily reminder time" %>
   <%= f.time_select :reminder_time %>
+
   <br />
-  <%= f.submit "Update" %>
+  <%= f.submit "Dave" %>
 <% end %>

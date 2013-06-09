@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130608221905) do
+ActiveRecord::Schema.define(:version => 20130609034157) do
 
   create_table "flosses", :force => true do |t|
     t.integer  "user"
@@ -20,19 +20,7 @@ ActiveRecord::Schema.define(:version => 20130608221905) do
     t.integer  "skipped"
   end
 
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "image"
-    t.datetime "reminder"
-    t.datetime "next_reminder"
-    t.time     "reminder_time"
-  end
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'users' for column 'next_session'
 
 end
