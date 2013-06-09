@@ -46,7 +46,7 @@ class FlossesController < ApplicationController
 
     respond_to do |format|
       if @floss.save
-        format.html { redirect_to @floss, notice: 'Floss was successfully created.' }
+        format.html { redirect_to @floss}
         format.json { render json: @floss, status: :created, location: @floss }
       else
         format.html { render action: "new" }
