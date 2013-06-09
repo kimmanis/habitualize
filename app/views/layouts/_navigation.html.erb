@@ -16,15 +16,9 @@
      <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class="has-dropdown">
-          <a href="#"><%= current_user.name %></a>
-          <ul class="dropdown">
-            <li><a href="<%= edit_user_path(current_user) %>">Edit Reminder Time</a></li>
-            <li><%= link_to "Admin", users_path %></li>
-            <li><a href="<%= signout_path %>">Logout</a></li>
-
-          </ul>
-        </li>
+        <li><a href="#"><%= current_user.name %></a></li>
+        <li><%= link_to "Admin", users_path %></li>
+        <li><a href="<%= signout_path %>">Logout</a></li>
       </ul>
     </section>
 

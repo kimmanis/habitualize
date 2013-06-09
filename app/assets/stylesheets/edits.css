@@ -58,7 +58,7 @@
   color: #fff;
 }
 .title-dark {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 100;
   color: #000;
 }
@@ -98,9 +98,10 @@
   border-radius: 50px;
 }
 .star{
-  -moz-border-radius: 250px;
-  border-radius: 250px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
   border: solid 5px #fff;
+  width: 200px;
 }
 .success-text {
   font-size: 30px;
