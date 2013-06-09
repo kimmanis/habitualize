@@ -11,18 +11,18 @@ Really? You aren't going to floss??
     </div>
   </div>
 <div class="row">
-	<div class="large-6 small-12 end scolumns">
-      <p class="success-text center">Great work <%= @user.first_name %>! Be a flossboss!</p>
-      <p class="center share">Show off your hard work:
+	<div class="large-12 small-12 end scolumns">
+      <p class="success-text center">Great work <%= @user.first_name %>!</p>
+      <p class="center share">Show off:
       <a href="#" class="zocial facebook" style="font-size:10px;">post</a> <a href="#" class="zocial twitter" style="font-size:10px;">tweet</a></br>
-      <a href="<%= root_url %>" class="center share">or go back home</a>
+      <p class="center"><%= link_to 'Back', root_path, :class=>"button popup-snooze" %></p>
   </p>
     </div>
 </div>
 </div>
 <% end %>
 
-<!-- <%= link_to 'Back', root_path, :class=>"button" %> -->
+
 
 </br>
 
