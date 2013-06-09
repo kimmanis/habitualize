@@ -22,7 +22,7 @@
 
 <!-- today -->
 <% if @floss_today %>
-<% if @floss_today.skipped == 1 %>
+<% if @floss_today.skipped %>
   <div class="row status">
     <div class="large-3 small-3 columns">
       <img src="assets/x.png">
@@ -60,7 +60,7 @@
 
 <!-- yesterday -->
 <% if @floss_yesterday %>
-<% if @floss_yesterday.skipped == 1 %>
+<% if @floss_yesterday.skipped %>
   <div class="row status">
     <div class="large-3 small-3 columns">
       <img src="assets/x.png">
@@ -95,7 +95,7 @@
 
 <!-- 2 days ago -->
 <% if @floss_three %>
-<% if @floss_three.skipped == 1 %>
+<% if @floss_three.skipped %>
   <div class="row status">
     <div class="large-3 small-3 columns">
       <img src="assets/x.png">
@@ -130,7 +130,7 @@
 
 <!-- 3 days ago -->
 <% if @floss_four %>
-<% if @floss_four.skipped == 1 %>
+<% if @floss_four.skipped %>
   <div class="row status">
     <div class="large-3 small-3 columns">
       <img src="assets/x.png">
@@ -166,7 +166,7 @@
 
 <!-- 4 days ago -->
 <% if @floss_five %>
-<% if @floss_five.skipped == 1 %>
+<% if @floss_five.skipped %>
   <div class="row status">
     <div class="large-3 small-3 columns">
       <img src="assets/x.png">
