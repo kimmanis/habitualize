@@ -2,10 +2,19 @@
 	<%= image_tag @user.image %><%= @user.name %>
 	</br>
 
+<%= f.label "Lina's Comments from this week:" %>
+<em>I think I'm finally getting track 12. Maybe it's time for a new one?</em>
+</br>
+
+<%= f.label "Notes for this week" %>
+ <%= f.text_field :teacher_notes, :rows=>"3" %>
+
+<%= f.label "Next session" %>
+ <%= f.time_select :next_session %>
 	
   <%= f.label "Daily reminder time" %>
   <%= f.time_select :reminder_time %>
 
   <br />
-  <%= f.submit "Dave" %>
+  <%= f.submit "Save" %>
 <% end %>

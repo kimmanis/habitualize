@@ -6,9 +6,12 @@
     </div>
     <div class="large-6 small-8 end scolumns">
       <p class="name"><%= current_user.name %></p>
-      <p><% if current_user.reminder_time %>
-      	Daily reminder time: <%= current_user.reminder_time.to_s(:reminder_time) %>
-      	<% end %>
+      <p>10 minutes: Warmup sequence </br>
+          5 minutes: Paradiddles</br>
+          5 minutes: Triple stroke rolls</br>
+          5 minutes: Single flammed mill</br>
+          5 minutes: Inverted flam tap</br>
+          10 minutes: play along with Track 12</br>
       </p>
     </div>
   </div><br />
@@ -122,7 +125,7 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't practiced on <%= (Date.today-2.days).strftime("%A") %>.</p>
+      <p class="status-text">You didn't practice on <%= (Date.today-2.days).strftime("%A") %>.</p>
       <p class="sub-status-text">Aw, you can always practice today.</p>
     </div>
   </div>
@@ -207,9 +210,9 @@
 <!-- show the popup if it's your time to floss! -->
 <% if @past_time %>
 	<script type="text/javascript">
-	$(document).ready(function() {
-    $("#myModal").foundation('reveal', 'open');
-	});
+//	$(document).ready(function() {
+//    $("#myModal").foundation('reveal', 'open');
+//	});
 	</script>
 <% end %>
 

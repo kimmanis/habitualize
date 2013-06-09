@@ -1,4 +1,9 @@
-<div class="row">
+	<div class="row">
+		Hey <%= @user.first_name %>, how did it go?
+		<textarea name="comments" cols="25" rows="5">
+		</textarea>
+	</div>
+	<div class="row">
 	<!-- yes -->
 	<div class="small-4 columns">
 	<%= form_for(@floss) do |f| %>
