@@ -1,29 +1,39 @@
 <div class="row">
 
-<div class="small-3 columns">
+<!-- yes -->
+<div class="small-6 columns">
 <%= form_for(@floss) do |f| %>
 
     <% #f.number_field :user %>
     <%= f.hidden_field :user %>
 
-    <%= f.submit "Yes! I flossed!", :class=>"success tiny button" %>
+    <%= f.submit "Yes! I flossed!", :class=>"success small button popup" %>
 
 <% end %>
 </div>
-<%= form_for(@user) do |g| %>
-<div class="small-3 columns">
-  <%= g.select(:next_reminder, options_for_select([['1 hour', Time.now.to_datetime+1.hours], ['2 hours', Time.now.to_datetime+2.hours], ['3 hours', Time.now.to_datetime+3.hours], ['4 hours', Time.now.to_datetime+4.hours]])) %>
-  <br />
-</div>
-<div class="small-3 columns">
-  <%= g.submit "Snooze", :class=>"secondary tiny button" %>
-</div>
-<% end %>
-<div class="small-3 columns">
+
+
+<!-- no -->
+<div class="small-6 columns">
 <%= form_for(@floss) do |n| %>
   <%= n.hidden_field :user %>
   <%= n.hidden_field :skipped, :value=>"1" %>
-  <%= n.submit "Skip today", :class=>"alert tiny button" %>
+  <%= n.submit "Skip today", :class=>"alert small button popup" %>
 <% end %>
 </div>
 </div>
+
+<div class="row">
+<!-- snooze -->
+<%= form_for(@user) do |g| %>
+<div class="small-6 columns">
+  <%= g.select(:next_reminder, options_for_select([['1 hour', Time.now.to_datetime+1.hours], ['2 hours', Time.now.to_datetime+2.hours], ['3 hours', Time.now.to_datetime+3.hours], ['4 hours', Time.now.to_datetime+4.hours]])) %>
+  <br />
+</div>
+<div class="small-6 columns">
+  <%= g.submit "Snooze", :class=>"secondary small button popup" %>
+</div>
+<% end %>
+</div>
+
+
