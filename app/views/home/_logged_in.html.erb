@@ -14,7 +14,7 @@
   </div><br />
   <div class="row">
     <div class="large-12 columns">
-      <p class="center"><a href="#" data-reveal-id="myModal" class="button checkin">Did you floss?</a></p>
+      <p class="center"><a href="#" data-reveal-id="myModal" class="button checkin">Did you practice?</a></p>
     </div>
   </div>
 </div>
@@ -38,7 +38,7 @@
       <img src="assets/check.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You flossed today! Go you!</p>
+      <p class="status-text">You practiced today! Go you!</p>
       <p class="sub-status-text">Done at <%= @floss_today.created_at.to_s(:reminder_time) %>!</p>
     </div>
   </div>
@@ -49,8 +49,8 @@
       <img src="assets/alarm.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You skipped today</p>
-      <p class="sub-status-text">You haven't flossed yet. There's still time!</p>
+      <p class="status-text">You practiced today</p>
+      <p class="sub-status-text">You haven't practiced yet. There's still time!</p>
     </div>
   </div>
 <% end %>
@@ -76,7 +76,7 @@
       <img src="assets/check.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You flossed yesterday! You're flossome!</p>
+      <p class="status-text">You practiced yesterday! Great job!</p>
       <p class="sub-status-text">Done at <%= @floss_yesterday.created_at.to_s(:reminder_time) %>!</p>
     </div>
   </div>
@@ -101,8 +101,8 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= (Date.today-2.days).strftime("%A") %>.</p>
-      <p class="sub-status-text">Aw, man. You always have today.</p>
+      <p class="status-text">You didn't practice on <%= (Date.today-2.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">Aw, you can always practice today.</p>
     </div>
   </div>
 <% else %>
@@ -111,7 +111,7 @@
       <img src="assets/check.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You flossed yesterday! You're flossome!</p>
+      <p class="status-text">You practiced yesterday! Keep it up!</p>
       <p class="sub-status-text">Done at <%= @floss_three.created_at.to_s(:reminder_time) %>!</p>
     </div>
   </div>
@@ -122,8 +122,8 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= (Date.today-2.days).strftime("%A") %>.</p>
-      <p class="sub-status-text">Aw, man. You always have today.</p>
+      <p class="status-text">You didn't practiced on <%= (Date.today-2.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">Aw, you can always practice today.</p>
     </div>
   </div>
 <% end %>
@@ -136,7 +136,7 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= (Date.today-3.days).strftime("%A") %>.</p>
+      <p class="status-text">You didn't practice on <%= (Date.today-3.days).strftime("%A") %>.</p>
       <p class="sub-status-text">Is it really that hard?</p>
     </div>
   </div>
@@ -146,7 +146,7 @@
       <img src="assets/check.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You flossed yesterday! You're flossome!</p>
+      <p class="status-text">You practiced yesterday! Awesome job!</p>
       <p class="sub-status-text">Done at <%= @floss_four.created_at.to_s(:reminder_time) %>!</p>
     </div>
   </div>
@@ -157,7 +157,7 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= (Date.today-3.days).strftime("%A") %>.</p>
+      <p class="status-text">You didn't practice on <%= (Date.today-3.days).strftime("%A") %>.</p>
       <p class="sub-status-text">Is it really that hard?</p>
     </div>
   </div>
@@ -172,7 +172,7 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= (Date.today-4.days).strftime("%A") %>.</p>
+      <p class="status-text">You didn't practice on <%= (Date.today-4.days).strftime("%A") %>.</p>
       <p class="sub-status-text">You can change!</p>
     </div>
   </div>
@@ -182,7 +182,7 @@
       <img src="assets/check.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You flossed yesterday! You're flossome!</p>
+      <p class="status-text">You practiced yesterday! You're awesome!</p>
       <p class="sub-status-text">Done at <%= @floss_five.created_at.to_s(:reminder_time) %>!</p>
     </div>
   </div>
@@ -193,7 +193,7 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= (Date.today-4.days).strftime("%A") %>.</p>
+      <p class="status-text">You didn't practice on <%= (Date.today-4.days).strftime("%A") %>.</p>
       <p class="sub-status-text">You can change!</p>
     </div>
   </div>
@@ -216,7 +216,7 @@
 
 <!-- modal ux: find the rest in flosses/form -->
 <div id="myModal" class="reveal-modal">
-  <p class="title">Did you floss?</p>
+  <p class="title">Did you practice?</p>
   <%= render "flosses/form"  %>
   <a class="close-reveal-modal">&#215;</a>
 </div>
