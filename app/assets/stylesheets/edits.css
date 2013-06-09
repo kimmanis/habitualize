@@ -84,3 +84,19 @@
   -moz-border-radius: 50px;
   border-radius: 50px;
 }
+.star{
+  -moz-border-radius: 250px;
+  border-radius: 250px;
+  border: solid 5px #fff;
+}
+.success-text {
+  font-size: 30px;
+  font-weight: 100;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.share {
+  color: #fff;
+  font-weight: 200;
+}

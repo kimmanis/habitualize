@@ -6,13 +6,18 @@ Really? You aren't going to floss??
 <% else %>
 <div class="hero">
   <div class="row">
-    <div class="large-2 small-4 columns">
-    	<%= image_tag current_user.image, :class=>"profile-picture", :size=>"80x80" %>
+    <div class="large-12 small-12 columns">
+    	<p class="center"><img src="http://www.odyssey-academy.com/storage/images/star-transparent.png?__SQUARESPACE_CACHEVERSION=1320689791151" class="star"></center>
     </div>
-    <div class="large-6 small-8 end scolumns">
-      <p class="name">You did it <%= @user.first_name %>! Keep on flossing!</p>
+  </div>
+<div class="row">
+	<div class="large-6 small-12 end scolumns">
+      <p class="success-text center">Great work <%= @user.first_name %>! Be a flossboss!</p>
+      <p class="center share">Show off your hard work:
+      <a href="#" class="zocial facebook" style="font-size:10px;">post</a> <a href="#" class="zocial twitter" style="font-size:10px;">tweet</a>
+  </p>
     </div>
-  </div><br />
+</div>
 </div>
 <% end %>
 
@@ -22,7 +27,7 @@ Really? You aren't going to floss??
 
 <% User.all.each do |user| %>
   <div class="row status">
-    <div class="large-3 small-2 columns">
+    <div class="large-3 small-3 columns">
       <%= image_tag user.image, :class=>"pic-small" %>
     </div>
     <div class="large-6 small-6 columns">
