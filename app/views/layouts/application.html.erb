@@ -9,6 +9,11 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+    <link rel="apple-touch-icon" href="/assets/habit h logo.jpg" />
+    <link rel="icon" type="image/png" href="/assets/16.png" />
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
     <div id="container" class="container">
