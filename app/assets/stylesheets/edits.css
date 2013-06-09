@@ -50,3 +50,33 @@
   padding-top: 0px;
   margin-bottom: 0px;
 }
+.reveal-modal {
+  background-color: #2aa74b;
+}
+.title {
+  font-size: 30px;
+  font-weight: 100;
+  color: #fff;
+}
+.popup, .popup:hover {
+  border: solid 0px #000;
+  background-color: #f7941d;
+  -webkit-box-shadow: 0 0 0 0px;
+  -moz-box-shadow: 0 0 0 0px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+.popup-snooze, .popup-snooze:hover {
+  border: solid 0px #000;
+  background-color: #999999;
+  -webkit-box-shadow: 0 0 0 0px;
+  -moz-box-shadow: 0 0 0 0px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
