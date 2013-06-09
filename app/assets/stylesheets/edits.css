@@ -58,6 +58,11 @@
   font-weight: 100;
   color: #fff;
 }
+.title-dark {
+  font-size: 30px;
+  font-weight: 100;
+  color: #000;
+}
 
 .page-title {
   font-size: 30px;
@@ -70,9 +75,9 @@
   background-color: #f7941d;
   -webkit-box-shadow: 0 0 0 0px;
   -moz-box-shadow: 0 0 0 0px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  font-size: 16px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 12px;
   font-weight: 100;
   margin-bottom: 0px;
   -webkit-appearance: none;
@@ -83,8 +88,8 @@
   -webkit-box-shadow: 0 0 0 0px;
   -moz-box-shadow: 0 0 0 0px;
   -moz-border-radius: 10px;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 12px;
   font-weight: 100;
   margin-bottom: 0px;
   -webkit-appearance: none;
