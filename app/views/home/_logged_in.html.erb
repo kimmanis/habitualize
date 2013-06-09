@@ -6,7 +6,10 @@
     </div>
     <div class="large-6 small-8 end scolumns">
       <p class="name"><%= current_user.name %></p>
-      <p>Daily reminder time: <%= current_user.reminder_time.to_s(:reminder_time) %></p>
+      <p><% if current_user.reminder_time %>
+      	Daily reminder time: <%= current_user.reminder_time.to_s(:reminder_time) %>
+      	<% end %>
+      </p>
     </div>
   </div><br />
   <div class="row">
@@ -63,7 +66,7 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You skipped yesterday</p>
+      <p class="status-text">You skipped yesterday.</p>
       <p class="sub-status-text">Just take it one day at a time.</p>
     </div>
   </div>
@@ -84,13 +87,13 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You skipped yesterday</p>
+      <p class="status-text">You skipped yesterday.</p>
       <p class="sub-status-text">Just take it one day at a time.</p>
     </div>
   </div>
 <% end %>
 
-<!-- 3 days ago -->
+<!-- 2 days ago -->
 <% if @floss_three %>
 <% if @floss_three.skipped == 1 %>
   <div class="row status">
@@ -98,8 +101,8 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= Date.today.strftime("%A") %>.</p>
-      <p class="sub-status-text">Just take it one day at a time.</p>
+      <p class="status-text">You didn't floss on <%= (Date.today-2.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">Aw, man. You always have today.</p>
     </div>
   </div>
 <% else %>
@@ -119,12 +122,82 @@
       <img src="assets/x.png">
     </div>
     <div class="large-9 small-9 columns">
-      <p class="status-text">You didn't floss on <%= Date.today.strftime("%A") %></p>
-      <p class="sub-status-text">Just take it one day at a time.</p>
+      <p class="status-text">You didn't floss on <%= (Date.today-2.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">Aw, man. You always have today.</p>
     </div>
   </div>
 <% end %>
 
+<!-- 3 days ago -->
+<% if @floss_four %>
+<% if @floss_four.skipped == 1 %>
+  <div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/x.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You didn't floss on <%= (Date.today-3.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">Is it really that hard?</p>
+    </div>
+  </div>
+<% else %>
+  <div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/check.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You flossed yesterday! You're flossome!</p>
+      <p class="sub-status-text">Done at <%= @floss_four.created_at.to_s(:reminder_time) %>!</p>
+    </div>
+  </div>
+<% end %>
+<% else %>
+<div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/x.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You didn't floss on <%= (Date.today-3.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">Is it really that hard?</p>
+    </div>
+  </div>
+<% end %>
+
+
+<!-- 4 days ago -->
+<% if @floss_five %>
+<% if @floss_five.skipped == 1 %>
+  <div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/x.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You didn't floss on <%= (Date.today-4.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">You can change!</p>
+    </div>
+  </div>
+<% else %>
+  <div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/check.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You flossed yesterday! You're flossome!</p>
+      <p class="sub-status-text">Done at <%= @floss_five.created_at.to_s(:reminder_time) %>!</p>
+    </div>
+  </div>
+<% end %>
+<% else %>
+<div class="row status">
+    <div class="large-3 small-3 columns">
+      <img src="assets/x.png">
+    </div>
+    <div class="large-9 small-9 columns">
+      <p class="status-text">You didn't floss on <%= (Date.today-4.days).strftime("%A") %>.</p>
+      <p class="sub-status-text">You can change!</p>
+    </div>
+  </div>
+<% end %>
   
     <!-- Footer -->
 
