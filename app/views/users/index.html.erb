@@ -1,8 +1,38 @@
-<h3>Jason's Music School</h3>
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.name, edit_user_path(user) %>, Next session: <%= user.next_session.to_date if user.next_session %>
-    </li>
-  <% end %>
-</ul>
+<div class="row hero">
+		<div class="large-12 small-12 columns">
+			<p class="page-title">Jason's Music School</p>
+	</div>
+</div>
+
+<div class="row status">
+	<div class="large-3 small-3 columns">
+	  <p class="status-text">
+	  	Student
+	  </p>
+	</div>
+	<div class="large-4 small-4 large-offset-4 small-offset-5 columns">
+	  <p class="status-text">
+		Next Session
+	  </p>
+	</div>
+</div>
+
+<% @users.each do |user| %>
+<div class="row status">
+	<div class="large-3 small-3 columns">
+	  <p class="status-text">
+	  	<%= image_tag user.image, :class=>"pic-small" %>
+	  </p>
+	</div>
+	<div class="large-5 small-5 columns">
+	  <p class="status-text">
+	  	<%= link_to user.name, edit_user_path(user) %>
+	  </p>
+	</div>
+	<div class="large-4 small-4 columns">
+	  <p class="status-text">
+		<%= user.next_session.to_date if user.next_session %>
+	  </p>
+	</div>
+</div>
+<% end %>

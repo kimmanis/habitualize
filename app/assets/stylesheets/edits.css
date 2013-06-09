@@ -58,6 +58,12 @@
   font-weight: 100;
   color: #fff;
 }
+.page-title {
+  font-size: 30px;
+  font-weight: 100;
+  color: #fff;
+  margin-bottom: 5px;
+}
 .popup, .popup:hover {
   border: solid 0px #000;
   background-color: #f7941d;
